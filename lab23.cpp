@@ -1,5 +1,7 @@
 // [Missing Code 1] Include header file.
   
+#include "lab23.h"
+
 int main(){
 	srand(time(0));
 	
@@ -10,6 +12,9 @@ int main(){
 	
 	Equipment sword(0,8,4);
 	// [Missing Code 2]  Create Equipment axes, shield and armor here
+	Equipment axes(0,16,-3);
+	Equipment shield(0,-1,7);
+	Equipment armor(25,-2,2);
 
 	
 	
@@ -17,6 +22,28 @@ int main(){
 	cout << " [1] Sword \n [2] Axes \n [3] Shield \n [4] Armor \n";
 	cout << "Please selet your equipment: ";
 	cin >> eq;
+
+	if(eq=='1')
+	{
+		Equipment *Wea = &sword;
+		hero.equip(Wea);
+	}
+	else if(eq=='2')
+	{
+		Equipment *Wea = &axes;
+		hero.equip(Wea);
+	}
+	else if(eq=='3')
+	{
+		Equipment *Wea = &shield;
+		hero.equip(Wea);
+	}
+	else if(eq=='4')
+	{
+		Equipment *Wea = &armor;
+		hero.equip(Wea);
+	}
+
 	// [Missing Code 3] Equip a selected equipment to the hero. 
 
 	
@@ -58,6 +85,26 @@ int main(){
 			cout << "Please select your equipment: ";
 			cin >> eq;
 			// [Missing Code 3] Equip a selected equipment to the hero.
+			if(eq=='1')
+		{
+			Equipment *Wea = &sword;
+			hero.equip(Wea);
+		}
+			else if(eq=='2')
+		{
+			Equipment *Wea = &axes;
+			hero.equip(Wea);
+		}
+		else if(eq=='3')
+		{
+			Equipment *Wea = &shield;
+			hero.equip(Wea);
+		}
+		else if(eq=='4')
+		{
+			Equipment *Wea = &armor;
+			hero.equip(Wea);
+		}
 
 			
 		}
